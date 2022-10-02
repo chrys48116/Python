@@ -41,18 +41,18 @@ def delay(t = 10):
 delay(3)#pode alterar o tempo aleatoriamente
 #------------------------------------------------------------------------------
 
-url = "https://jsonplaceholder.typicode.com/users"
-request = requests.get(url)
-t=request.json()
-lista = json.loads(request.content)
+#------------------------------------------------------------------------------
+#Links de testes json
+#------------------------------------------------------------------------------
+# https://jsonplaceholder.typicode.com/users
+# https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL
+# https://maps.googleapis.com/maps/api/geocode/json?address=140+Rua+Cica,Curitiba%C3%AD,+PR&key=AIzaSyBKP7Lndi1G9-O1NpCwV7y_QV5i7tMBx9o
 
-for lista in lista:
-    print(lista['name'])
+url = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL"
+requisicao = requests.get(url)
+t=requisicao.json()
 
-#lista usando dicionario
-# lista=dict(t)
+lista = json.loads(requisicao.content)
+# for lista in lista:
+print(lista['USDBRL'])
 
-#Mostrando os resultados
-# result = json.dumps(t)
-# print (lista)
-# print(lista.items)
