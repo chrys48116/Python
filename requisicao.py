@@ -1,6 +1,20 @@
 import requests
 import json
 
+
+# tipo = ''
+# concurso = 0
+
+# apiURL = 'https://servicebus2.caixa.gov.br/portaldeloterias/api/'
+# resuladostURL = 'resultados?modalidade='
+
+# tipos = { 'megasena': 'Mega-Sena', 'lotofacil': 'Lotofacil', 'quina': 'Quina',
+#         'lotomania': 'Lotomania', 'timemania': 'Timemania', 'duplasena': 'Dupla-Sena',
+#         'supersete': 'Super-Sete', 'diadesorte': 'Dia de Sorte'
+#         }
+
+
+
 #------------------------------------------------------------------------------
 #Função delay de aleatoriamente 10s podendo ser alterado
 #------------------------------------------------------------------------------
@@ -27,17 +41,18 @@ def delay(t = 10):
 delay(3)#pode alterar o tempo aleatoriamente
 #------------------------------------------------------------------------------
 
-url = "https://maps.googleapis.com/maps/api/geocode/json?address=140+Rua+Cica,Curitiba%C3%AD,+PR&key=AIzaSyBKP7Lndi1G9-O1NpCwV7y_QV5i7tMBx9o"
-requisicao = requests.get(url)
-t=requisicao.json()
-# print(requisicao)
-# print(t)
+url = "https://jsonplaceholder.typicode.com/users"
+request = requests.get(url)
+t=request.json()
+lista = json.loads(request.content)
+
+for lista in lista:
+    print(lista['name'])
 
 #lista usando dicionario
-lista=dict(t)
+# lista=dict(t)
 
 #Mostrando os resultados
-result = json.dumps(t)
+# result = json.dumps(t)
 # print (lista)
-print(lista.values)
-print(lista.keys)
+# print(lista.items)
