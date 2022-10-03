@@ -1,0 +1,8 @@
+#opcoes do segundo menu
+=======================================
+|           1- Ultimo jogo            |
+|           2- Jogo especifico        |
+|           3- Todos os Concursos     |
+|           4- Voltar                 |
+|           5- Sair                   |
+=======================================
